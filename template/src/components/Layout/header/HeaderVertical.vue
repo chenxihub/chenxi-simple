@@ -19,11 +19,9 @@
                    :style="$store.state.setting.theme === 'deep' && $store.state.setting.layout === 'top'?'color:#ffffff;':''"></i></span>
         <el-dropdown-menu slot="dropdown">
           <el-dropdown-item icon="iconfont icon-zizhufuwuting" command="self_help">
-            <!--{{$t("menu.person.self_help")}}-->
             菜单一
           </el-dropdown-item>
           <el-dropdown-item icon="iconfont icon-tuichudenglu" command="exit">
-            <!--{{$t("menu.person.exit")}}-->
             退出
           </el-dropdown-item>
           <div style="margin: 0 auto;text-align: center;">
