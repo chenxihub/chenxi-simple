@@ -5,7 +5,7 @@
         <i class="el-icon-setting"></i>
       </div>
       <div class="para-right-content">
-        <h4>{{$t("setting.style.name")}}</h4>
+        <h4>setting.style.name</h4>
         <el-row :gutter="10">
           <el-radio-group
             v-model="resource.radio"
@@ -18,7 +18,7 @@
                 <img src="https://gw.alipayobjects.com/zos/rmsportal/LCkqqYNmvBEbokSDscrm.svg" alt="">
               </el-row>
               <el-row>
-                <el-radio border label="deep">{{$t("setting.style.deep")}}</el-radio>
+                <el-radio border label="deep">setting.style.deep</el-radio>
               </el-row>
             </el-col>
             <el-col :span="12">
@@ -26,7 +26,7 @@
                 <img src="https://gw.alipayobjects.com/zos/rmsportal/jpRkZQMyYRryryPNtyIC.svg" alt="">
               </el-row>
               <el-row>
-                <el-radio border label="light">{{$t("setting.style.light")}}</el-radio>
+                <el-radio border label="light">setting.style.light</el-radio>
               </el-row>
             </el-col>
             <el-col :span="12">
@@ -34,7 +34,7 @@
                 <img src="https://gw.alipayobjects.com/zos/rmsportal/LCkqqYNmvBEbokSDscrm.svg" alt="">
               </el-row>
               <el-row>
-                <el-radio border label="dark">{{$t("setting.style.dark")}}</el-radio>
+                <el-radio border label="dark">setting.style.dark</el-radio>
               </el-row>
             </el-col>
             <el-col :span="12">
@@ -42,7 +42,7 @@
                 <img src="https://gw.alipayobjects.com/zos/rmsportal/jpRkZQMyYRryryPNtyIC.svg" alt="">
               </el-row>
               <el-row>
-                <el-radio border label="simple">{{$t("setting.style.simple")}}</el-radio>
+                <el-radio border label="simple">setting.style.simple</el-radio>
               </el-row>
             </el-col>
           </el-radio-group>
@@ -59,7 +59,7 @@
           </div>
         </el-row>
         <el-divider></el-divider>
-        <h4>{{$t("setting.navigator.name")}}</h4>
+        <h4>setting.navigator.name</h4>
         <el-row :gutter="10">
           <el-radio-group
             v-model="resource.layouts"
@@ -72,7 +72,7 @@
                 <img src="https://gw.alipayobjects.com/zos/rmsportal/JopDzEhOqwOjeNTXkoje.svg" alt="侧边">
               </el-row>
               <el-row>
-                <el-radio border label="left">{{$t("setting.navigator.left")}}</el-radio>
+                <el-radio border label="left">setting.navigator.left</el-radio>
               </el-row>
             </el-col>
             <el-col :span="12">
@@ -80,16 +80,16 @@
                 <img src="https://gw.alipayobjects.com/zos/rmsportal/KDNDBbriJhLwuqMoxcAr.svg" alt="顶部">
               </el-row>
               <el-row>
-                <el-radio border label="top">{{$t("setting.navigator.top")}}</el-radio>
+                <el-radio border label="top">setting.navigator.top</el-radio>
               </el-row>
             </el-col>
           </el-radio-group>
         </el-row>
         <el-form ref="form" :model="resource" style="margin-left: 15px;" class="hidden">
-          <el-form-item :label="$t('setting.fixed_head.name')">
+          <el-form-item label="setting.fixed_head.name">
             <el-radio-group v-model="resource.header" @change="changeHeaderHandler">
-              <el-radio label="fixed">{{$t("setting.fixed_head.yes")}}</el-radio>
-              <el-radio label="float">{{$t("setting.fixed_head.no")}}</el-radio>
+              <el-radio label="fixed">setting.fixed_head.yes</el-radio>
+              <el-radio label="float">setting.fixed_head.no</el-radio>
             </el-radio-group>
           </el-form-item>
         </el-form>
@@ -110,12 +110,12 @@
           >
             <el-col :span="12">
               <el-row>
-                <el-radio border label="dark_green">{{$t("setting.skin.kind[0].txt")}}</el-radio>
+                <el-radio border label="dark_green">setting.skin.kind[0].txt</el-radio>
               </el-row>
             </el-col>
             <el-col :span="12">
               <el-row>
-                <el-radio border label="succinct">{{$t("setting.skin.kind[1].txt")}}</el-radio>
+                <el-radio border label="succinct">setting.skin.kind[1].txt</el-radio>
               </el-row>
             </el-col>
           </el-radio-group>

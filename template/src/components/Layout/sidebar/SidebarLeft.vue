@@ -14,7 +14,7 @@
       >
         <el-menu-item index="20190208" class="para-sider-menu-index-logo-white">
           <img src="../../../assets/paraviewlogo1.png" alt="paraview logo">
-          <span slot="title" style="margin-left: 15px;">{{$t("menu.dashboards")}}</span>
+          <span slot="title" style="margin-left: 15px;">menu.dashboards</span>
         </el-menu-item>
         <!-- 菜单渲染DOM -->
         <template v-for="(parent) in routes">
@@ -26,7 +26,7 @@
           >
             <i :class="parent.meta.icon" v-if="parent.meta.icon"></i>
             <i class="iconfont icon-caidan" v-else></i>
-            <span slot="title" class="child-name">{{$t(parent.meta.name)}}</span>
+            <span slot="title" class="child-name">{{parent.meta.name}}</span>
           </el-menu-item>
           <!-- 一级菜单 -->
           <el-submenu v-else :key="parent.path" :index="parent.path">
@@ -34,7 +34,7 @@
               <i :class="parent.meta.icon" v-if="parent.meta.icon"></i>
               <i class="iconfont icon-caidan" v-else></i>
               <span slot="title" style="margin-left: 10px;">
-                    {{$t(parent.meta.name)}}
+                    {{parent.meta.name}}
               </span>
             </template>
             <!-- 二级菜单 -->
@@ -43,11 +43,11 @@
               <span slot="title">
               <i :class="child.meta.icon" v-if="child.meta.icon"></i>
               <i class="iconfont icon-list" v-else></i>
-              <span class="child-name" style="margin-left: 10px;">{{$t(child.meta.name)}}</span>
+              <span class="child-name" style="margin-left: 10px;">{{child.meta.name}}</span>
               </span>
               <el-menu-item :index="`${parent.path}/${child.path}`" v-if="!child.children ||
               child.children.length === 0" @click="goNextPageByTwoRoute(parent.path,child.path)">
-                {{$t(child.meta.name)}}
+                {{child.meta.name}}
               </el-menu-item>
               <!-- 三级菜单 -->
               <el-menu-item v-else v-for="(son) in child.children"
@@ -55,7 +55,7 @@
                             :key="son.path"
                             @click="goNextPageByThreeRoute(parent.path,child.path,son.path)"
               >
-                {{$t(son.meta.name)}}
+                {{son.meta.name}}
               </el-menu-item>
             </el-submenu>
           </el-submenu>
