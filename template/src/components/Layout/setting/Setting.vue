@@ -47,7 +47,6 @@
             </el-col>
           </el-radio-group>
         </el-row>
-        <!--<h4>{{$t("setting.main_color.name")}}</h4>-->
         <el-row class="hidden">
           <div style="margin-left: 15px;">
             <el-row :gutter="8">
@@ -100,7 +99,6 @@
         </el-row>
         <el-divider></el-divider>
         <!-- change-skin -->
-        <!-- <h4>{{$t("setting.skin.name")}}</h4> -->
         <el-row :gutter="10" class="hidden">
           <el-radio-group
             v-model="resource.skin"

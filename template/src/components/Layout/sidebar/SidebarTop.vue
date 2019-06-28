@@ -27,7 +27,7 @@
                 >
                   <i :class="parent.meta.icon" v-if="parent.meta.icon"></i>
                   <i class="iconfont icon-caidan" v-else></i>
-                  <span slot="title" class="child-name">{{$t(parent.meta.name)}}</span>
+                  <span slot="title" class="child-name">{{parent.meta.name}}</span>
                 </el-menu-item>
                 <!-- 一级菜单 -->
                 <el-submenu v-else :key="parent.path" :index="parent.path">
