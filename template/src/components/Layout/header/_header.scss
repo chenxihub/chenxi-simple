@@ -1,0 +1,133 @@
+.el-submenu__title {
+  line-height: 34px;
+}
+.header-horizon {
+  line-height: 60px;
+  position: relative;
+  z-index: 202;
+
+  .header-horizon-row {
+    .header-horizon-menu-expend {
+      cursor: pointer;
+      display: inline-block;
+      padding: 0 22px;
+      position: absolute;
+      left: 2px;
+
+      i {
+        color: #909399;
+      }
+
+      &:hover {
+        background-color: #ecf5ff;
+
+        i {
+          color: #66b1ff;
+        }
+      }
+    }
+  }
+
+  .more-class {
+    padding: 22px 15px;
+    cursor: pointer;
+  }
+
+  .iconfont {
+    cursor: pointer;
+    padding: 22px 15px;
+  }
+}
+
+.header-vertical {
+  line-height: 60px;
+  text-align: center;
+  z-index: 202;
+  position: relative;
+
+  .iconfont {
+    cursor: pointer;
+  }
+
+  .el-header {
+    padding: 0;
+
+    .internet-class {
+      padding: 22px 15px;
+      cursor: pointer;
+    }
+
+    .more-class {
+      padding: 22px 15px;
+      cursor: pointer;
+    }
+  }
+}
+
+.light-el-dropdown {
+  height: 59px;
+
+  &:hover .avatar-classes-name {
+    color: #303133;
+  }
+
+  &:hover .avatar-classes-components {
+    background-color: #66b1ff;
+
+    i {
+      color: #ffffff;
+    }
+  }
+}
+
+.deep-el-dropdown {
+  height: 59px;
+
+  &:hover {
+    background-color: #434a50;
+  }
+}
+
+.avatar-classes {
+  height: 100%;
+  padding: 18px 12px 0px 12px;
+  cursor: pointer;
+  transition: all .3s;
+  display: flex;
+  width: auto;
+
+  .avatar-classes-components {
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    border-radius: 50%;
+    background-color: #e8eaec;
+    text-align: center;
+
+    i {
+      font-size: 14px;
+      color: #ccc;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      vertical-align: middle;
+      border-style: none;
+    }
+  }
+
+  .avatar-classes-name {
+    line-height: 24px;
+    margin-left: 8px;
+    color: rgba(0, 0, 0, .65);
+    font-size: 14px;
+  }
+}
+
+.sidebar-top-navmenu-dark .avatar-classes {
+  .avatar-classes-name {
+    color: #fff;
+  }
+}

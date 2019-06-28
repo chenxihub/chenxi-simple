@@ -1,0 +1,32 @@
+.empty {
+  display: flex;
+  justify-content: center;
+  //align-items: center;
+
+  .empty-container {
+    text-align: center;
+
+    img {
+      display: inline-block;
+    }
+  }
+
+  .empty-tips-text {
+    h1 {
+      margin-bottom: 20px;
+      margin-top: 60px;
+      color: #434e59;
+      font-weight: 600;
+      font-size: 38px;
+      line-height: 40px;
+    }
+
+    .empty-tips {
+      margin-bottom: 16px;
+      color: rgba(0, 0, 0, .45);
+      font-size: 20px;
+      line-height: 28px;
+    }
+  }
+
+}

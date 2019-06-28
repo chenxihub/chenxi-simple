@@ -1,0 +1,67 @@
+@import "../../../styles/variables";
+
+.para-setting {
+  position: fixed;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 201;
+  transform: translateX(0);
+  right: -301px;
+  top: 0;
+
+  .para-left-btn {
+    background: #FA541C;
+    border-radius: 4px 0 0 4px;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    line-height: 54px;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    pointer-events: auto;
+    float: left;
+    margin-top: calc(100vh - 100px);
+
+    i {
+      color: #fff;
+      font-size: 24px;
+    }
+
+    &:hover i {
+      opacity: 0.8;
+    }
+  }
+
+  .para-right-content {
+    width: 300px;
+    background: #ffffff;
+    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.15);
+    height: 100%;
+    float: right;
+
+    h4 {
+      font-weight: normal;
+      padding-left: 15px;
+      color: $font-normal-color;
+    }
+  }
+
+  .el-col {
+    margin-bottom: 5px;
+  }
+
+  .el-row {
+    margin-bottom: 10px;
+  }
+}
+
+.para-div-click {
+  position: absolute;
+  z-index: 201;
+  left: 0;
+  top: 0;
+  width: calc(100vw - 300px);
+  height: 100%;
+}
