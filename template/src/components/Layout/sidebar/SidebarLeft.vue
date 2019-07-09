@@ -5,10 +5,9 @@
         :default-active="activeIndex"
         :collapse="isCollapse"
         class="el-menu-vertical-demo"
-        :backgroundColor="'bgColor' | themeConfig(theme)"
-        :textColor="'textColor' | themeConfig(theme)"
-        :activeTextColor="'activeTextColor' | themeConfig(theme)"
-        :data-theme="'bgColor' | themeConfig(theme)"
+        backgroundColor=""
+        textColor=""
+        :activeTextColor="'activeTextColor'"
         :unique-opened=true
         style="border-right: 0;"
       >
@@ -75,7 +74,7 @@
         theme: state => state.setting.theme,
         routes: state => state.menu.addRouters,
         skin: state => state.setting.skin,
-      }),
+      })
     },
     data() {
       return {

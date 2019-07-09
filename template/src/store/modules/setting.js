@@ -5,7 +5,7 @@ export default {
     header: "float",
     color: "",
     column: "",
-    theme: "deep",
+    theme: "green",
     layout: "left",
     language: "zh-CN",
     skin: ""

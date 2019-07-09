@@ -8,13 +8,23 @@
       </el-col>
       <el-header style="text-align: center; font-size: 12px;float: right;padding: 0;">
         <el-dropdown @command="changeLanguageHandler" trigger="click">
-          <i class="el-icon-discover internet-class"
+          <i class="el-icon-ship internet-class"
              :style="$store.state.setting.theme === 'deep' && $store.state.setting.layout === 'top'?'color:#ffffff;':''"></i>
           <el-dropdown-menu slot="dropdown">
             <el-dropdown-item v-for="(val, key) in $languageList"
                               :icon="`iconfont icon-${key}`"
                               :command="key"
                               :key="key">{{val}}
+            </el-dropdown-item>
+          </el-dropdown-menu>
+        </el-dropdown>
+        <!-- changeTheme -->
+        <el-dropdown @command="changeThemeHandler">
+          <i class="el-icon-menu"></i>
+          <el-dropdown-menu>
+            <el-dropdown-item v-for="item in themeConfig" :style="{color: item.color}" :command="item.name">
+              <span class="color-block" :style="{'background-color': item.color}"></span>
+              {{item.text}}
             </el-dropdown-item>
           </el-dropdown-menu>
         </el-dropdown>
@@ -51,10 +61,28 @@
         avatar: "", // 用户是否有头像,
         leftOrRight: true,
         version: version.version,
+        themeConfig: [{
+          text: "绿色",
+          name: "theme-green",
+          color: "#0aa679",
+        },
+          {
+            text: "紫色",
+            name: "theme-purple",
+            color: "#7546c9",
+          },
+          {
+            text: "自定义",
+            name: "customize",
+            color: "",
+          }],
       };
     },
+    computed: {
+      theme: state => state.setting.theme
+    },
     methods: {
-      ...mapActions(["openLefeMenuCollapse", "setLanguageAction"]),
+      ...mapActions(["openLefeMenuCollapse", "setLanguageAction", "settThemeAction"]),
       changeLeftMenuStatus() {
         this.leftOrRight = !this.leftOrRight;
         this.openLefeMenuCollapse({});
@@ -75,11 +103,15 @@
             break;
         }
       },
+      changeThemeHandler(theme) {
+        window.document.documentElement.setAttribute("data-theme", theme);
+        this.settThemeAction(theme);
+      },
       // openFormDesign() {
       //   // window.open("/form");
       //   window.open("/formDesign/index.html#key=form29182e836a-USER-console&basic=true");
       // },
-    },
+    }
   };
 </script>
 <style lang="scss">

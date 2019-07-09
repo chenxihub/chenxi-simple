@@ -2,13 +2,23 @@
   <div class="header-vertical">
     <el-header style="text-align: center; font-size: 12px;float: right;">
       <el-dropdown @command="changeLanguageHandler" trigger="click">
-        <i class="el-icon-discover internet-class"
+        <i class="el-icon-ship internet-class"
            :style="$store.state.setting.theme === 'deep' && $store.state.setting.layout === 'top'?'color:#ffffff;':''"></i>
         <el-dropdown-menu slot="dropdown">
           <el-dropdown-item v-for="(val, key) in $languageList"
                             :icon="`iconfont icon-${key}`"
                             :command="key"
                             :key="key">{{val}}
+          </el-dropdown-item>
+        </el-dropdown-menu>
+      </el-dropdown>
+      <!-- changeTheme -->
+      <el-dropdown>
+        <i class="el-icon-menu"></i>
+        <el-dropdown-menu>
+          <el-dropdown-item v-for="item in themeConfig" :style="{color: item.color}">
+            <span class="color-block" :style="{'background-color': item.color}"></span>
+            {{item.text}}
           </el-dropdown-item>
         </el-dropdown-menu>
       </el-dropdown>
@@ -43,6 +53,18 @@
       return {
         avatar: "", // 用户是否有头像
         version: version.version,
+        themeConfig: [{
+          text: "绿色",
+          color: "#0aa679"
+        },
+          {
+            text: "紫色",
+            color: "#7546c9",
+          },
+          {
+            text: "自定义",
+            color: "",
+          }],
       };
     },
     methods: {

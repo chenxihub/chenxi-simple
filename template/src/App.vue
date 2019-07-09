@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" :class="theme">
     <!-- Top Layout -->
     <el-container v-if="layout === 'top'">
       <el-header style="padding: 0;">
@@ -14,7 +14,7 @@
     </el-container>
     <!-- Left Layout -->
     <el-container v-else>
-      <el-aside width="auto" :class="changeTheme" :data-value="changeTheme">
+      <el-aside width="auto">
         <SidebarLeft/>
       </el-aside>
       <el-container>

@@ -38,6 +38,18 @@
     padding: 22px 15px;
   }
 }
+.el-dropdown {
+  i{
+    font-size: 18px;
+    cursor: pointer;
+    padding: 0 10px;
+  }
+}
+.color-block{
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+}
 
 .header-vertical {
   line-height: 60px;

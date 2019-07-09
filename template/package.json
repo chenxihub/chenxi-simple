@@ -1,8 +1,8 @@
 {
-  "name": "{{ name }}",
-  "description": "{{ description }}",
-  "author": "{{ author }}",
-  "license": "{{ license }}",
+  "name": "template",
+  "description": "description",
+  "author": "author",
+  "license": "license",
   "version": "1.0.0",
   "private": true,
   "scripts": {
