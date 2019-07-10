@@ -1,0 +1,29 @@
+$color_primary: #7546c9;
+$color_sub: #c8b6ea;
+$color_hover: #fff;
+$color_font: #666;
+
+.theme-purple {
+  .el-container {
+    color: $color_font;
+
+    a, .hello a {
+      color: $color_primary;
+    }
+  }
+
+  .el-dropdown,
+  .header-horizon .header-horizon-row .header-horizon-menu-expend i,
+  .el-menu-item.is-active {
+    color: $color_primary;
+  }
+
+  .el-menu-item:focus, .el-menu-item:hover {
+    background-color: $color_sub;
+    color: $color_hover;
+  }
+
+  .para-setting .para-left-btn {
+    background-color: $color_primary;
+  }
+}

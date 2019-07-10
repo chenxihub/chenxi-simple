@@ -10,8 +10,8 @@ import "./utils/global";
 // import "./router/promission"; // 开启动态路由
 import "para-lib/lib/para-lib.css";
 /* 全局引入皮肤样式 */
-import "./styles/skin/dark-green.scss";
-import "./styles/skin/succinct.scss";
+import "./styles/skin/green.scss";
+import "./styles/skin/purple.scss";
 /* 全局过滤器 */
 import filters from "@/utils/filter";
 /*
